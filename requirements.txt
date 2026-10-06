@@ -1,0 +1,20 @@
+# ST-GCN Demo - CPU/GPU auto
+# Cài: pip install -r requirements.txt
+# Khuyên dùng Python 3.10 hoặc 3.11 (MediaPipe ổn định nhất).
+# Python 3.13 vẫn cài được torch/opencv, nhưng mediapipe có thể lỗi -> nếu lỗi, tạo venv 3.11.
+
+# PyTorch: tự chọn bản CPU hoặc CUDA theo máy.
+# Ví dụ máy nhà RTX 5060 Ti 16GB (CUDA 12.x):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# Máy hiện tại không có card rời (CPU only):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+opencv-python>=4.8
+ultralytics>=8.0
+pyyaml>=6.0
+tqdm>=4.66
+gradio>=4.0
+# mediapipe chi dung duoc py3.10/11 legacy; py3.13 dung YOLO backend
+# mediapipe>=0.10.9
